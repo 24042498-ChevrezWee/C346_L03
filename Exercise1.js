@@ -1,13 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+const Movie = ({ title, year }) => {
+  return (
+      <View>
+        <Text>{title} {year}</Text>
+      </View>
+  );
+};
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <View style={styles.container}>
+        <Movie title="Avenger 5" year="2026" />
+        <Movie title="Titanic" year="1997" />;
+        <StatusBar style="auto" />
+      </View>
   );
+
 }
 
 const styles = StyleSheet.create({
